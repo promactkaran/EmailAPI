@@ -15,7 +15,11 @@ writer = csv.writer(f)
 SCOPES = 'https://www.googleapis.com/auth/gmail.readonly'
 CLIENT_SECRET_FILE = 'Cs.json'
 APPLICATION_NAME = 'Track Emails'
-
+try:
+    import argparse
+    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+except ImportError:
+    flags = None
 
 def get_credentials(): #login if not already logged in. 
     """Gets valid user credentials from storage.
@@ -50,11 +54,7 @@ credentials = get_credentials()
 http = credentials.authorize(httplib2.Http())
 service = discovery.build('gmail', 'v1', http=http)
 
-try:
-    import argparse
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-except ImportError:
-    flags = None
+
 
 def ListMessagesMatchingQuery(user_id, query=''):
   
