@@ -3,7 +3,7 @@
 **A simple python script that fetches mostly all the  domains email is registered to. **
 
 
-`sudo pip install requirements.txt`
+`sudo pip install -r requirements.txt`
 
 To run
 
