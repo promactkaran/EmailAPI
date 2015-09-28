@@ -1,6 +1,6 @@
-# EmailAPI
+# EmailAPI -GoogleEmail Tracks
 
-**A simple python script that fetches mostly all the  domains email is registered to. **
+**A simple python script that fetches mostly all the  domains an google email is registered to. **
 
 
 `sudo pip install -r requirements.txt`
